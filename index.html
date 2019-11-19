@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js" integrity="sha256-ZIWqk8gTF95t9mHIlxHL4ycYu52IHVcDiE9r5WauNjE=" crossorigin="anonymous"></script>
+
+<title>Comptage des Tickets Resto</title>
+    
+  </head>
+  <body>
+
+<div class="container">
+       <div class="col-md-6">
+
+
+    <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-barcode fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p id="nombre" class="announcement-heading">0</p>
+                <p class="announcement-text">Ticket scann&eacute;s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="col-md-6">
+          <div class="panel panel-success">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-euro fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p id="montant_total" class="announcement-heading">0 €</p>
+                <p class="announcement-text">Montant total</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+    <div class="row">
+
+     <form action="" method="post" id="searchForm">
+      <input id="code_input" name="s" value=""> <-- Cliquer ici pour commencer
+    </form>
+    </div>
+
+    <div class="row">
+      <div class="alert alert-warning" role="alert">
+    <div id="message"></div>
+  </div>
+    </div>
+
+    </div>
+
+       
+        <div class="col-md-6">
+       <div class="row">
+          <canvas id="trChart" width="400px" height="300px"></canvas>
+         </div>
+       </div>
+
+
+    <div class="row">
+
+    <button id="test_graph">Ajouter 5 tickets random</button>
+    <button id="load_save">Recharger les scans de la dernière session</button>
+    </div>
+</div>  
+
+       
+    
+  </body>
+</html>
+    <script src="js/reader.js" type="text/javascript" charset="utf-8"></script>
